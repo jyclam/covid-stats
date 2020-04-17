@@ -1,10 +1,72 @@
 * {
-  box-sizing: border-box;
   color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #128260;
+  font: 2rem;
+  margin: 0rem;
 }
 
 body {
-  background-color: #128260;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0.5rem;
+}
+
+
+
+.grid-container {
+  background-color: pink;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  /* grid-template-columns: auto; */
+  grid-template-rows: 5fr 5fr 85fr 5fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "footer";
+}
+
+.grid-container * {
+  padding: 0.5rem;
+}
+
+.main-head {
+  /* position: fixed; */
+  /* top: 0px; */
+  grid-area: header;
+  background-color: red;
+  height: 3rem;
+  width: 100%;
+}
+
+.main-nav {
+  /* position: fixed;
+  top: 25px; */
+  grid-area: nav;
+  background-color: orange;
+  height: 5rem;
+  width: 100%;
+}
+
+.content {
+  grid-area: content;
+  background-color: yellow;
+  height: 5000px;
+  width: 100%;
+}
+
+.main-footer {
+  grid-area: footer;
+  background-color: lightgreen;
+  /* height: 100%; */
+  width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0px;
+}
+
+.shrunken {
+  height: 20px;
 }
